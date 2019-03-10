@@ -18,4 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var swoosh: UIImageView!
     
     @IBOutlet weak var BgImg: UIImageView!
+    @IBAction func unwindFromSkillVC(unWindSegue: UIStoryboardSegue){
+        
+        
+    }
 }

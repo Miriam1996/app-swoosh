@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeScreenBG" translatesAutoresizingMaskIntoConstraints="NO" id="31L-Ne-X97">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="48u-zW-iG0">
                                 <rect key="frame" x="147.66666666666666" y="40" width="118.99999999999997" height="20"/>
@@ -49,6 +49,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0ml-oZ-AWK" kind="show" id="rrW-xq-B5w"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city  &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCH-Zh-jPj">
                                 <rect key="frame" x="77" y="255" width="260" height="44"/>
@@ -68,7 +71,7 @@
                             <constraint firstItem="31L-Ne-X97" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9rc-y3-5ZT"/>
                             <constraint firstItem="48u-zW-iG0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HCg-4d-m24"/>
                             <constraint firstItem="RBi-mX-VbU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jbv-cV-IGe"/>
-                            <constraint firstItem="31L-Ne-X97" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SC4-w8-wc8"/>
+                            <constraint firstItem="31L-Ne-X97" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="SC4-w8-wc8"/>
                             <constraint firstItem="qbo-Wi-1XF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aJO-IL-JyL"/>
                             <constraint firstItem="aCH-Zh-jPj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gNK-ai-5OV"/>
                             <constraint firstItem="qbo-Wi-1XF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q5W-Gm-5P2"/>
@@ -98,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="Xdk-wT-wiu">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="FJg-MX-AFH">
                                 <rect key="frame" x="0.0" y="40" width="414" height="66"/>
@@ -167,18 +170,31 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gct-WB-fqI">
+                                <rect key="frame" x="0.0" y="10" width="44" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="ZVa-xn-9ef"/>
+                                    <constraint firstAttribute="height" constant="24" id="otV-ms-dia"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="0V2-I4-Ebb" kind="unwind" unwindAction="unwindFromSkillVCWithUnWindSegue:" id="rLf-Ny-pfS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3ek-nY-cg0" firstAttribute="leading" secondItem="vCW-Ty-9Lk" secondAttribute="leading" id="0MA-4v-aSl"/>
                             <constraint firstItem="FJg-MX-AFH" firstAttribute="leading" secondItem="vCW-Ty-9Lk" secondAttribute="leading" id="1PR-yH-FB1"/>
+                            <constraint firstItem="gct-WB-fqI" firstAttribute="top" secondItem="fZM-FV-6Sm" secondAttribute="top" constant="10" id="3xI-P3-8OF"/>
                             <constraint firstItem="Xdk-wT-wiu" firstAttribute="bottom" secondItem="vCW-Ty-9Lk" secondAttribute="bottom" id="70L-1A-xdt"/>
-                            <constraint firstItem="Xdk-wT-wiu" firstAttribute="top" secondItem="vCW-Ty-9Lk" secondAttribute="top" id="8bR-6s-cB5"/>
+                            <constraint firstItem="Xdk-wT-wiu" firstAttribute="top" secondItem="vCW-Ty-9Lk" secondAttribute="top" constant="-20" id="8bR-6s-cB5"/>
                             <constraint firstItem="3ek-nY-cg0" firstAttribute="top" secondItem="FJg-MX-AFH" secondAttribute="bottom" constant="50" id="Abe-Qb-k5Y"/>
                             <constraint firstItem="Xdk-wT-wiu" firstAttribute="leading" secondItem="vCW-Ty-9Lk" secondAttribute="leading" id="CUz-Jc-jgr"/>
                             <constraint firstItem="FJg-MX-AFH" firstAttribute="top" secondItem="vCW-Ty-9Lk" secondAttribute="top" constant="20" id="Hlv-XL-hZi"/>
                             <constraint firstItem="vCW-Ty-9Lk" firstAttribute="trailing" secondItem="FJg-MX-AFH" secondAttribute="trailing" id="OjG-pb-LC8"/>
                             <constraint firstItem="vCW-Ty-9Lk" firstAttribute="bottom" secondItem="l0T-8C-Izg" secondAttribute="bottom" constant="20" id="Rh1-Fr-Kcd"/>
+                            <constraint firstItem="gct-WB-fqI" firstAttribute="leading" secondItem="vCW-Ty-9Lk" secondAttribute="leading" id="UrR-aN-xao"/>
                             <constraint firstItem="l0T-8C-Izg" firstAttribute="leading" secondItem="vCW-Ty-9Lk" secondAttribute="leading" id="Zv5-J6-7NT"/>
                             <constraint firstItem="vCW-Ty-9Lk" firstAttribute="trailing" secondItem="3ek-nY-cg0" secondAttribute="trailing" id="dY4-Yi-RGP"/>
                             <constraint firstItem="Xdk-wT-wiu" firstAttribute="trailing" secondItem="vCW-Ty-9Lk" secondAttribute="trailing" id="t86-Ud-EFN"/>
@@ -188,6 +204,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VxV-Kj-ADi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0V2-I4-Ebb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="898.55072463768124" y="131.25"/>
         </scene>
@@ -200,7 +217,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-MH-qYO">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="qyd-QV-IFS">
                                 <rect key="frame" x="0.0" y="40" width="414" height="66"/>
@@ -273,7 +290,7 @@
                             <constraint firstItem="HXb-ls-VMK" firstAttribute="trailing" secondItem="qyd-QV-IFS" secondAttribute="trailing" id="g1k-cd-IjB"/>
                             <constraint firstItem="Ma7-MH-qYO" firstAttribute="trailing" secondItem="HXb-ls-VMK" secondAttribute="trailing" id="mF5-8O-m68"/>
                             <constraint firstItem="pAK-W4-2uC" firstAttribute="trailing" secondItem="HXb-ls-VMK" secondAttribute="trailing" id="nSg-vf-rk6"/>
-                            <constraint firstItem="Ma7-MH-qYO" firstAttribute="top" secondItem="HXb-ls-VMK" secondAttribute="top" id="nvH-EH-1m7"/>
+                            <constraint firstItem="Ma7-MH-qYO" firstAttribute="top" secondItem="HXb-ls-VMK" secondAttribute="top" constant="-20" id="nvH-EH-1m7"/>
                             <constraint firstItem="Ma7-MH-qYO" firstAttribute="leading" secondItem="HXb-ls-VMK" secondAttribute="leading" id="qF1-5z-wqy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HXb-ls-VMK"/>
@@ -285,6 +302,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
